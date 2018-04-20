@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.PasswordField;
@@ -22,7 +23,7 @@ public class LoginForm extends Application {
 		@Override 
 		   public void start(Stage stage) {
 			
-			stage.setTitle("Login form");			// Label the stage (a window)
+			stage.setTitle("Login form by Jawahar");			// Label the stage (a window)
 			
 			Pane theRoot = new Pane();
 			// setting labels and buttons and text fields
@@ -31,7 +32,7 @@ public class LoginForm extends Application {
 			Label lblUser = new Label("User");
 			Label lblPassword = new Label("Password");
 			
-			
+            DatePicker datePicker = new DatePicker();
 			
 			Button btnOk = new Button("Login");
 			
@@ -43,6 +44,8 @@ public class LoginForm extends Application {
 			lblUser.setLayoutX(50); lblUser.setLayoutY(100);
 			lblPassword.setLayoutX(50); lblPassword.setLayoutY(150);
 			
+			datePicker.setLayoutX(200); datePicker.setLayoutY(240);
+			
 			txtFirst.setLayoutX(200); txtFirst.setLayoutY(100);
 			txtSecond.setLayoutX(200); txtSecond.setLayoutY(145);
 			
@@ -52,11 +55,11 @@ public class LoginForm extends Application {
 			
 			
 			theRoot.getChildren().addAll(lblHead, lblUser,lblPassword,
-	                txtFirst,txtSecond,
+	                txtFirst,txtSecond,datePicker,
 	                btnOk);
 			
 		
-			Scene scene = new Scene(theRoot,600,500); //Creating a scene object
+			Scene scene = new Scene(theRoot,600,400); //Creating a scene object
 		     
 			stage.setScene(scene);    //Adding scene to the stage 
 		      
